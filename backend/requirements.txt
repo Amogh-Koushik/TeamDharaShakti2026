@@ -1,0 +1,17 @@
+# Core framework
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9      # required for FastAPI file uploads
+
+# ── Add these when you connect the real ML models ──────────────────────────
+# AST (Audio Spectrogram Transformer):
+#   transformers>=4.40.0
+#   torchaudio>=2.3.0
+#   torch>=2.3.0
+#
+# Vosk (speech recognition):
+#   vosk>=0.3.45
+#
+# YOLOv8n (person detection):
+#   ultralytics>=8.2.0
+#   opencv-python-headless>=4.9.0

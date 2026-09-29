@@ -1,0 +1,200 @@
+.dashboardContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100%;
+  background: var(--panel-bg);
+  border-right: 1px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(20px);
+  z-index: 10;
+  transition: width 0.3s ease;
+}
+
+.logoArea {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--panel-border);
+  gap: 12px;
+}
+
+.logoIcon {
+  color: var(--text-main);
+}
+
+.logoText h1 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.logoText p {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.nav {
+  padding: 20px 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navItem:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navItem.active {
+  color: var(--primary);
+  background: rgba(0, 210, 255, 0.1);
+  border-right: 3px solid var(--primary);
+}
+
+.navItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  padding: 20px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.footerText {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.mainWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  height: var(--header-height);
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--panel-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  backdrop-filter: blur(20px);
+  z-index: 5;
+}
+
+.headerLeft, .headerRight, .headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.headerBadge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.missionInfo h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.missionInfo p {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.emergencyBtn {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.emergencyBtn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.operatorInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.operatorAvatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.operatorDetails h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+.operatorDetails p {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 0;
+}
