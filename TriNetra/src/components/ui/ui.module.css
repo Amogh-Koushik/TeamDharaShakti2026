@@ -1,0 +1,195 @@
+.glassCard {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  min-height: 0;
+}
+
+.cardHeader {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.cardIcon {
+  color: var(--text-muted);
+}
+
+.cardContent {
+  padding: 16px;
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+/* Camera Feed */
+.cameraFeed {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cameraHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.cameraName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.liveBadge {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+  border: 1px solid var(--success);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cameraView {
+  height: 200px;
+  position: relative;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+}
+
+.cameraView.rgb { background-image: url('https://images.unsplash.com/photo-1518534107694-80327429188d?q=80&w=800&auto=format&fit=crop'); }
+.cameraView.thermal { background-image: url('https://images.unsplash.com/photo-1620023412356-820875c7b8e1?q=80&w=800&auto=format&fit=crop'); filter: hue-rotate(90deg) contrast(1.5); }
+.cameraView.ceiling { background-image: url('https://images.unsplash.com/photo-1596773539869-70ee2da1ab03?q=80&w=800&auto=format&fit=crop'); filter: grayscale(1); }
+.cameraView.probe { background-image: url('https://images.unsplash.com/photo-1499810631641-541e76d678a2?q=80&w=800&auto=format&fit=crop'); }
+
+.cameraOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cameraTimestamp {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-family: monospace;
+}
+
+.fullscreenBtn {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.fullscreenBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Stat Block */
+.statBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statIcon {
+  color: inherit;
+}
+
+.statBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.statUnit {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.statSubValue {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
